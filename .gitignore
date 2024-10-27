@@ -1,0 +1,24 @@
+# project Logs
+project/logs
+project/*.log
+project/npm-debug.log*
+project/yarn-debug.log*
+project/yarn-error.log*
+project/pnpm-debug.log*
+project/lerna-debug.log*
+
+project/node_modules
+project/dist
+project/dist-ssr
+project/*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
