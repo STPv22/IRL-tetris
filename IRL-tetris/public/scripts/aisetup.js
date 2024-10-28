@@ -1,11 +1,11 @@
 // More API functions here:
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
-// the link to your model provided by Teachable Machine export panel
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 async function initAI() {
     const modelURL = 'public/models/model.json';
+    const weightURL = 'public/models/weights.bin'
     const metadataURL = 'public/models/metadata.json';
 
     // load the model and metadata
@@ -22,7 +22,6 @@ async function initAI() {
 
     // append/get elements to the DOM
     const canvas = document.getElementById('webcam');
-    canvas.width = 200; canvas.height = 200;
     ctx = canvas.getContext('2d');
     labelContainer = document.getElementById('label-container');
     for (let i = 0; i < maxPredictions; i++) { // and class labels
