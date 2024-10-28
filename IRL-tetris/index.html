@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/css/style.css">
+    <script type="text/javascript" src="public/scripts/tetris.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/takahirox/nes-js/v0.0.1/build/nes.min.js"></script>
+    <link rel="shortcut icon" href="public/imgs/favicon.webp" type="image/x-icon">
     <title>IRL Tetris</title>
   </head>
-  <body>
+  <body onload="init()">
     <div id="root">
-      
+      <p>
+        <canvas id="gameCanvas" width="256" height="240" style="width:30%; height:30%;"></canvas>
+      </p>
     </div>
   </body>
 </html>
