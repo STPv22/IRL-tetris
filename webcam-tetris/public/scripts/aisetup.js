@@ -5,7 +5,6 @@ let model, webcam, ctx, labelContainer, maxPredictions;
 
 async function initAI() {
     const modelURL = 'public/models/model.json';
-    const weightURL = 'public/models/weights.bin'
     const metadataURL = 'public/models/metadata.json';
 
     // load the model and metadata
@@ -21,9 +20,9 @@ async function initAI() {
     window.requestAnimationFrame(loop);
 
     // append/get elements to the DOM
-    const canvas = document.getElementById('webcam');
+    const canvas = document.querySelector('#webcam');
     ctx = canvas.getContext('2d');
-    labelContainer = document.getElementById('label-container');
+    labelContainer = document.querySelector('#label-container');
     for (let i = 0; i < maxPredictions; i++) { // and class labels
         labelContainer.appendChild(document.createElement('div'));
     }
@@ -61,3 +60,5 @@ function drawPose(pose) {
         tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
     }
 }
+
+initAI();
