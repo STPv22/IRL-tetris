@@ -9,12 +9,13 @@
 
     <link rel="stylesheet" href="public/css/style.css">
     <script type="text/javascript" src="public/scripts/tetris.js"></script>
+    <script type="text/javascript" src="public/scripts/aisetup.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/takahirox/nes-js/v0.0.1/build/nes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8.3/dist/teachablemachine-pose.min.js"></script>
   </head>
   <body onload="init();">
-    <div id="side-content" onload="">
+    <div id="side-content" onload="initAI();">
       <canvas id="webcam"></canvas>
       <div id="label-container"></div>
     </div>
@@ -23,6 +24,5 @@
         <canvas id="gameCanvas"></canvas>
       </p>
     </div>
-    <script type="text/javascript" src="public/scripts/aisetup.js"></script>
   </body>
 </html>

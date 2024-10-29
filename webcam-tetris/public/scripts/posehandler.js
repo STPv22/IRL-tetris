@@ -60,5 +60,3 @@ function drawPose(pose) {
         tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
     }
 }
-
-initAI();
